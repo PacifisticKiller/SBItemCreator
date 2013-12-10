@@ -8,6 +8,7 @@ using System.Text;
 using System.IO;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
+using System.Collections.Specialized;
 
 namespace SB_Item_Creator
 {
@@ -22,6 +23,7 @@ namespace SB_Item_Creator
         }
 
         public static string colorr="255",colorg="255",colorb="255",item;
+        SolidBrush stringbrush = new SolidBrush(Color.Red);
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -52,7 +54,7 @@ namespace SB_Item_Creator
                 form2.Show();
             }
         }
-
+        Color color;
         private void button2_Click(object sender, EventArgs e)
         {
             ColorDialog ColorDialog1 = new ColorDialog();
@@ -64,6 +66,7 @@ namespace SB_Item_Creator
                 colorb = ColorDialog1.Color.B.ToString();
                 colorname.Text = "R = "+colorr+Environment.NewLine+"G = "+colorg+Environment.NewLine+"B = "+colorb;
                 //button2.ForeColor = Color.FromArgb(ColorDialog1.Color.G, ColorDialog1.Color.B, ColorDialog1.Color.R);
+                color = Color.FromArgb(110,ColorDialog1.Color.R, ColorDialog1.Color.G, ColorDialog1.Color.B);
             }
         }
 
@@ -196,11 +199,14 @@ namespace SB_Item_Creator
             }
 
         }
-
+        //int key;
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //buttpicture.Image = Image.FromFile();
-            //buttpicture.Image = Butt.Images[listView1.];
+            //key = listView1.SelectedIndices[0];
+            //buttpicture.Image = ;
+            //this.listView1.SelectedItems.Clear();
+            //this.listView1.Update();
+            //label7.Text = Convert.ToString(key);
         }
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
@@ -235,13 +241,18 @@ namespace SB_Item_Creator
 
         private void projtype_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int key;
             Value.projtype = projtype.Text.ToLower();
             Value.projtype = Value.projtype.Replace(" ", String.Empty);
-           // key = ImageList
-            //projpicture.Image = Bullets.Images[key];
+            projpicture.Image = Bullets.Images[Value.projtype+".png"];
             //projpicture.Invalidate();
-            //label33.Text = Convert.ToString(key);
+        }
+
+        private void projpicture_Paint(object sender, PaintEventArgs e)
+        {
+            if (projpicture.Image == Bullets.Images[Value.projtype + ".png"])
+            {
+                
+            }
         }
     }
 }
