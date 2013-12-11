@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,35 +39,21 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.Recipetab = new System.Windows.Forms.TabPage();
             this.recipebox = new System.Windows.Forms.GroupBox();
+            this.removeitem = new System.Windows.Forms.Button();
+            this.additem = new System.Windows.Forms.Button();
+            this.itemnum = new System.Windows.Forms.NumericUpDown();
+            this.label38 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.itemlist = new System.Windows.Forms.ListBox();
+            this.amountmade = new System.Windows.Forms.NumericUpDown();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.othername = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.item6amount = new System.Windows.Forms.NumericUpDown();
-            this.item5amount = new System.Windows.Forms.NumericUpDown();
-            this.item4amount = new System.Windows.Forms.NumericUpDown();
-            this.item3amount = new System.Windows.Forms.NumericUpDown();
-            this.item2amount = new System.Windows.Forms.NumericUpDown();
-            this.item1amount = new System.Windows.Forms.NumericUpDown();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.craftingstation = new System.Windows.Forms.ComboBox();
-            this.CB6 = new System.Windows.Forms.ComboBox();
-            this.CB5 = new System.Windows.Forms.ComboBox();
-            this.CB4 = new System.Windows.Forms.ComboBox();
-            this.CB3 = new System.Windows.Forms.ComboBox();
-            this.CB2 = new System.Windows.Forms.ComboBox();
-            this.CB1 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.Buildingblocktab = new System.Windows.Forms.TabPage();
             this.label26 = new System.Windows.Forms.Label();
             this.Shieldtab = new System.Windows.Forms.TabPage();
@@ -91,14 +76,16 @@
             this.twohandbox = new System.Windows.Forms.GroupBox();
             this.guntwohanded = new System.Windows.Forms.CheckBox();
             this.ratesbox = new System.Windows.Forms.GroupBox();
-            this.recoiltime = new System.Windows.Forms.TextBox();
-            this.firetime = new System.Windows.Forms.TextBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.Firetime = new System.Windows.Forms.NumericUpDown();
+            this.recoiltime = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Maintab = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.levelnum = new System.Windows.Forms.NumericUpDown();
-            this.label23 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.maxstack = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.raritybox = new System.Windows.Forms.ComboBox();
@@ -146,20 +133,20 @@
             this.apexdesc = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.Rawcodetab = new System.Windows.Forms.TabPage();
+            this.rawrecipe = new System.Windows.Forms.RichTextBox();
             this.rawclear = new System.Windows.Forms.Button();
             this.rawcode = new System.Windows.Forms.RichTextBox();
             this.updatecode = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Bullets = new System.Windows.Forms.ImageList(this.components);
+            this.label23 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.Recipetab.SuspendLayout();
             this.recipebox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item6amount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item5amount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item4amount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item3amount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item2amount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item1amount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemnum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.amountmade)).BeginInit();
             this.Buildingblocktab.SuspendLayout();
             this.Shieldtab.SuspendLayout();
             this.Meleetab.SuspendLayout();
@@ -171,6 +158,8 @@
             this.gunnamebox.SuspendLayout();
             this.twohandbox.SuspendLayout();
             this.ratesbox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Firetime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recoiltime)).BeginInit();
             this.Maintab.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.levelnum)).BeginInit();
@@ -192,16 +181,6 @@
             this.groupBox11.SuspendLayout();
             this.Rawcodetab.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 567);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(243, 28);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // menuStrip1
             // 
@@ -234,12 +213,14 @@
             this.diToolStripMenuItem.Name = "diToolStripMenuItem";
             this.diToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.diToolStripMenuItem.Text = "Directory";
+            this.diToolStripMenuItem.Click += new System.EventHandler(this.diToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // Butt
             // 
@@ -400,35 +381,21 @@
             // 
             // recipebox
             // 
+            this.recipebox.Controls.Add(this.removeitem);
+            this.recipebox.Controls.Add(this.additem);
+            this.recipebox.Controls.Add(this.itemnum);
+            this.recipebox.Controls.Add(this.label38);
+            this.recipebox.Controls.Add(this.comboBox2);
+            this.recipebox.Controls.Add(this.label39);
+            this.recipebox.Controls.Add(this.itemlist);
+            this.recipebox.Controls.Add(this.amountmade);
+            this.recipebox.Controls.Add(this.label37);
+            this.recipebox.Controls.Add(this.label36);
+            this.recipebox.Controls.Add(this.othername);
             this.recipebox.Controls.Add(this.label22);
             this.recipebox.Controls.Add(this.comboBox3);
-            this.recipebox.Controls.Add(this.item6amount);
-            this.recipebox.Controls.Add(this.item5amount);
-            this.recipebox.Controls.Add(this.item4amount);
-            this.recipebox.Controls.Add(this.item3amount);
-            this.recipebox.Controls.Add(this.item2amount);
-            this.recipebox.Controls.Add(this.item1amount);
-            this.recipebox.Controls.Add(this.label21);
-            this.recipebox.Controls.Add(this.label20);
-            this.recipebox.Controls.Add(this.label19);
-            this.recipebox.Controls.Add(this.label18);
-            this.recipebox.Controls.Add(this.label17);
-            this.recipebox.Controls.Add(this.label16);
-            this.recipebox.Controls.Add(this.label15);
             this.recipebox.Controls.Add(this.craftingstation);
-            this.recipebox.Controls.Add(this.CB6);
-            this.recipebox.Controls.Add(this.CB5);
-            this.recipebox.Controls.Add(this.CB4);
-            this.recipebox.Controls.Add(this.CB3);
-            this.recipebox.Controls.Add(this.CB2);
-            this.recipebox.Controls.Add(this.CB1);
             this.recipebox.Controls.Add(this.label14);
-            this.recipebox.Controls.Add(this.label13);
-            this.recipebox.Controls.Add(this.label12);
-            this.recipebox.Controls.Add(this.label11);
-            this.recipebox.Controls.Add(this.label10);
-            this.recipebox.Controls.Add(this.label9);
-            this.recipebox.Controls.Add(this.label8);
             this.recipebox.Location = new System.Drawing.Point(6, 5);
             this.recipebox.Name = "recipebox";
             this.recipebox.Size = new System.Drawing.Size(408, 499);
@@ -436,10 +403,159 @@
             this.recipebox.TabStop = false;
             this.recipebox.Text = "Recipe";
             // 
+            // removeitem
+            // 
+            this.removeitem.Location = new System.Drawing.Point(227, 195);
+            this.removeitem.Name = "removeitem";
+            this.removeitem.Size = new System.Drawing.Size(175, 39);
+            this.removeitem.TabIndex = 60;
+            this.removeitem.Text = "Remove Item";
+            this.removeitem.UseVisualStyleBackColor = true;
+            this.removeitem.Click += new System.EventHandler(this.removeitem_Click);
+            // 
+            // additem
+            // 
+            this.additem.Location = new System.Drawing.Point(6, 195);
+            this.additem.Name = "additem";
+            this.additem.Size = new System.Drawing.Size(175, 39);
+            this.additem.TabIndex = 59;
+            this.additem.Text = "Add Item";
+            this.additem.UseVisualStyleBackColor = true;
+            this.additem.Click += new System.EventHandler(this.additem_Click);
+            // 
+            // itemnum
+            // 
+            this.itemnum.Location = new System.Drawing.Point(285, 20);
+            this.itemnum.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.itemnum.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.itemnum.Name = "itemnum";
+            this.itemnum.Size = new System.Drawing.Size(51, 20);
+            this.itemnum.TabIndex = 58;
+            this.itemnum.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.itemnum.ValueChanged += new System.EventHandler(this.itemnum_ValueChanged);
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(342, 22);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(46, 13);
+            this.label38.TabIndex = 57;
+            this.label38.Text = "(1-1000)";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Aegisalt",
+            "Cerulium",
+            "Copper",
+            "Diamond",
+            "Durasteel",
+            "Gold",
+            "Impervium",
+            "Iron",
+            "None",
+            "Pixels",
+            "Platinum",
+            "Plutonium",
+            "Rubium",
+            "Silver",
+            "Solarium",
+            "Steel",
+            "Titanium",
+            "Uranium",
+            "Violium"});
+            this.comboBox2.Location = new System.Drawing.Point(42, 18);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(237, 21);
+            this.comboBox2.TabIndex = 55;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(6, 21);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(30, 13);
+            this.label39.TabIndex = 56;
+            this.label39.Text = "Item:";
+            // 
+            // itemlist
+            // 
+            this.itemlist.FormattingEnabled = true;
+            this.itemlist.Location = new System.Drawing.Point(6, 46);
+            this.itemlist.Name = "itemlist";
+            this.itemlist.Size = new System.Drawing.Size(396, 147);
+            this.itemlist.Sorted = true;
+            this.itemlist.TabIndex = 54;
+            // 
+            // amountmade
+            // 
+            this.amountmade.Location = new System.Drawing.Point(133, 343);
+            this.amountmade.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.amountmade.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.amountmade.Name = "amountmade";
+            this.amountmade.Size = new System.Drawing.Size(51, 20);
+            this.amountmade.TabIndex = 53;
+            this.amountmade.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.amountmade.ValueChanged += new System.EventHandler(this.amountmade_ValueChanged);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(6, 345);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(114, 13);
+            this.label37.TabIndex = 52;
+            this.label37.Text = "Amount of items made:";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(3, 293);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(79, 13);
+            this.label36.TabIndex = 51;
+            this.label36.Text = "Name of Other:";
+            // 
+            // othername
+            // 
+            this.othername.Enabled = false;
+            this.othername.Location = new System.Drawing.Point(88, 290);
+            this.othername.Name = "othername";
+            this.othername.Size = new System.Drawing.Size(314, 20);
+            this.othername.TabIndex = 50;
+            this.othername.TextChanged += new System.EventHandler(this.othername_TextChanged);
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(3, 259);
+            this.label22.Location = new System.Drawing.Point(3, 319);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(124, 13);
             this.label22.TabIndex = 49;
@@ -459,447 +575,38 @@
             "Level 35",
             "Level 36",
             "Level 37"});
-            this.comboBox3.Location = new System.Drawing.Point(133, 256);
+            this.comboBox3.Location = new System.Drawing.Point(133, 316);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(269, 21);
             this.comboBox3.TabIndex = 48;
-            // 
-            // item6amount
-            // 
-            this.item6amount.Location = new System.Drawing.Point(285, 167);
-            this.item6amount.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.item6amount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.item6amount.Name = "item6amount";
-            this.item6amount.Size = new System.Drawing.Size(51, 20);
-            this.item6amount.TabIndex = 47;
-            this.item6amount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // item5amount
-            // 
-            this.item5amount.Location = new System.Drawing.Point(285, 140);
-            this.item5amount.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.item5amount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.item5amount.Name = "item5amount";
-            this.item5amount.Size = new System.Drawing.Size(51, 20);
-            this.item5amount.TabIndex = 46;
-            this.item5amount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // item4amount
-            // 
-            this.item4amount.Location = new System.Drawing.Point(285, 114);
-            this.item4amount.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.item4amount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.item4amount.Name = "item4amount";
-            this.item4amount.Size = new System.Drawing.Size(51, 20);
-            this.item4amount.TabIndex = 45;
-            this.item4amount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // item3amount
-            // 
-            this.item3amount.Location = new System.Drawing.Point(285, 88);
-            this.item3amount.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.item3amount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.item3amount.Name = "item3amount";
-            this.item3amount.Size = new System.Drawing.Size(51, 20);
-            this.item3amount.TabIndex = 44;
-            this.item3amount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // item2amount
-            // 
-            this.item2amount.Location = new System.Drawing.Point(285, 61);
-            this.item2amount.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.item2amount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.item2amount.Name = "item2amount";
-            this.item2amount.Size = new System.Drawing.Size(51, 20);
-            this.item2amount.TabIndex = 43;
-            this.item2amount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // item1amount
-            // 
-            this.item1amount.Location = new System.Drawing.Point(285, 35);
-            this.item1amount.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.item1amount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.item1amount.Name = "item1amount";
-            this.item1amount.Size = new System.Drawing.Size(51, 20);
-            this.item1amount.TabIndex = 42;
-            this.item1amount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(342, 169);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(46, 13);
-            this.label21.TabIndex = 41;
-            this.label21.Text = "(1-1000)";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(342, 143);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(46, 13);
-            this.label20.TabIndex = 40;
-            this.label20.Text = "(1-1000)";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(342, 116);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(46, 13);
-            this.label19.TabIndex = 39;
-            this.label19.Text = "(1-1000)";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(342, 90);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(46, 13);
-            this.label18.TabIndex = 38;
-            this.label18.Text = "(1-1000)";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(342, 63);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 13);
-            this.label17.TabIndex = 37;
-            this.label17.Text = "(1-1000)";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(342, 37);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(46, 13);
-            this.label16.TabIndex = 36;
-            this.label16.Text = "(1-1000)";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(282, 16);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 13);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Amount:";
+            this.comboBox3.Text = "Tier 1";
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // craftingstation
             // 
             this.craftingstation.FormattingEnabled = true;
             this.craftingstation.Items.AddRange(new object[] {
             "Anvil",
-            "Crafting Table"});
-            this.craftingstation.Location = new System.Drawing.Point(6, 219);
+            "Crafting Table",
+            "Metal Workstation",
+            "Robotic Crafting Table",
+            "Spinning Wheel",
+            "Other (Custom)"});
+            this.craftingstation.Location = new System.Drawing.Point(6, 263);
             this.craftingstation.Name = "craftingstation";
             this.craftingstation.Size = new System.Drawing.Size(396, 21);
             this.craftingstation.TabIndex = 29;
-            // 
-            // CB6
-            // 
-            this.CB6.FormattingEnabled = true;
-            this.CB6.Items.AddRange(new object[] {
-            "Aegisalt",
-            "Cerulium",
-            "Copper",
-            "Diamond",
-            "Durasteel",
-            "Gold",
-            "Impervium",
-            "Iron",
-            "None",
-            "Pixels",
-            "Platinum",
-            "Plutonium",
-            "Rubium",
-            "Silver",
-            "Solarium",
-            "Steel",
-            "Titanium",
-            "Uranium",
-            "Violium"});
-            this.CB6.Location = new System.Drawing.Point(51, 167);
-            this.CB6.Name = "CB6";
-            this.CB6.Size = new System.Drawing.Size(228, 21);
-            this.CB6.TabIndex = 28;
-            // 
-            // CB5
-            // 
-            this.CB5.FormattingEnabled = true;
-            this.CB5.Items.AddRange(new object[] {
-            "Aegisalt",
-            "Cerulium",
-            "Copper",
-            "Diamond",
-            "Durasteel",
-            "Gold",
-            "Impervium",
-            "Iron",
-            "None",
-            "Pixels",
-            "Platinum",
-            "Plutonium",
-            "Rubium",
-            "Silver",
-            "Solarium",
-            "Steel",
-            "Titanium",
-            "Uranium",
-            "Violium"});
-            this.CB5.Location = new System.Drawing.Point(51, 140);
-            this.CB5.Name = "CB5";
-            this.CB5.Size = new System.Drawing.Size(228, 21);
-            this.CB5.TabIndex = 27;
-            // 
-            // CB4
-            // 
-            this.CB4.FormattingEnabled = true;
-            this.CB4.Items.AddRange(new object[] {
-            "Aegisalt",
-            "Cerulium",
-            "Copper",
-            "Diamond",
-            "Durasteel",
-            "Gold",
-            "Impervium",
-            "Iron",
-            "None",
-            "Pixels",
-            "Platinum",
-            "Plutonium",
-            "Rubium",
-            "Silver",
-            "Solarium",
-            "Steel",
-            "Titanium",
-            "Uranium",
-            "Violium"});
-            this.CB4.Location = new System.Drawing.Point(51, 113);
-            this.CB4.Name = "CB4";
-            this.CB4.Size = new System.Drawing.Size(228, 21);
-            this.CB4.TabIndex = 26;
-            // 
-            // CB3
-            // 
-            this.CB3.FormattingEnabled = true;
-            this.CB3.Items.AddRange(new object[] {
-            "Aegisalt",
-            "Cerulium",
-            "Copper",
-            "Diamond",
-            "Durasteel",
-            "Gold",
-            "Impervium",
-            "Iron",
-            "None",
-            "Pixels",
-            "Platinum",
-            "Plutonium",
-            "Rubium",
-            "Silver",
-            "Solarium",
-            "Steel",
-            "Titanium",
-            "Uranium",
-            "Violium"});
-            this.CB3.Location = new System.Drawing.Point(51, 87);
-            this.CB3.Name = "CB3";
-            this.CB3.Size = new System.Drawing.Size(228, 21);
-            this.CB3.TabIndex = 25;
-            // 
-            // CB2
-            // 
-            this.CB2.FormattingEnabled = true;
-            this.CB2.Items.AddRange(new object[] {
-            "Aegisalt",
-            "Cerulium",
-            "Copper",
-            "Diamond",
-            "Durasteel",
-            "Gold",
-            "Impervium",
-            "Iron",
-            "None",
-            "Pixels",
-            "Platinum",
-            "Plutonium",
-            "Rubium",
-            "Silver",
-            "Solarium",
-            "Steel",
-            "Titanium",
-            "Uranium",
-            "Violium"});
-            this.CB2.Location = new System.Drawing.Point(51, 60);
-            this.CB2.Name = "CB2";
-            this.CB2.Size = new System.Drawing.Size(228, 21);
-            this.CB2.TabIndex = 24;
-            // 
-            // CB1
-            // 
-            this.CB1.FormattingEnabled = true;
-            this.CB1.Items.AddRange(new object[] {
-            "Aegisalt",
-            "Cerulium",
-            "Copper",
-            "Diamond",
-            "Durasteel",
-            "Gold",
-            "Impervium",
-            "Iron",
-            "None",
-            "Pixels",
-            "Platinum",
-            "Plutonium",
-            "Rubium",
-            "Silver",
-            "Solarium",
-            "Steel",
-            "Titanium",
-            "Uranium",
-            "Violium"});
-            this.CB1.Location = new System.Drawing.Point(51, 33);
-            this.CB1.Name = "CB1";
-            this.CB1.Size = new System.Drawing.Size(228, 21);
-            this.CB1.TabIndex = 17;
+            this.craftingstation.Text = "Crafting Table";
+            this.craftingstation.SelectedIndexChanged += new System.EventHandler(this.craftingstation_SelectedIndexChanged);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(144, 203);
+            this.label14.Location = new System.Drawing.Point(165, 247);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(117, 13);
+            this.label14.Size = new System.Drawing.Size(76, 13);
             this.label14.TabIndex = 23;
-            this.label14.Text = "Anvil or Crafting Table?";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 169);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(39, 13);
-            this.label13.TabIndex = 22;
-            this.label13.Text = "Item 6:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 143);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(39, 13);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "Item 5:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 116);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(39, 13);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Item 4:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 90);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 13);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Item 3:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 63);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(39, 13);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Item 2:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 37);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Item 1:";
+            this.label14.Text = "Creation Tool?";
             // 
             // Buildingblocktab
             // 
@@ -1031,7 +738,7 @@
             this.boxoptionsbox.Controls.Add(this.checkBox2);
             this.boxoptionsbox.Controls.Add(this.checkBox1);
             this.boxoptionsbox.Enabled = false;
-            this.boxoptionsbox.Location = new System.Drawing.Point(255, 134);
+            this.boxoptionsbox.Location = new System.Drawing.Point(255, 137);
             this.boxoptionsbox.Name = "boxoptionsbox";
             this.boxoptionsbox.Size = new System.Drawing.Size(157, 80);
             this.boxoptionsbox.TabIndex = 3;
@@ -1065,7 +772,7 @@
             this.gunbowbox.Controls.Add(this.guncheck);
             this.gunbowbox.Controls.Add(this.bowcheck);
             this.gunbowbox.Enabled = false;
-            this.gunbowbox.Location = new System.Drawing.Point(255, 60);
+            this.gunbowbox.Location = new System.Drawing.Point(255, 63);
             this.gunbowbox.Name = "gunbowbox";
             this.gunbowbox.Size = new System.Drawing.Size(157, 68);
             this.gunbowbox.TabIndex = 2;
@@ -1136,37 +843,64 @@
             // 
             // ratesbox
             // 
+            this.ratesbox.Controls.Add(this.checkBox4);
+            this.ratesbox.Controls.Add(this.Firetime);
             this.ratesbox.Controls.Add(this.recoiltime);
-            this.ratesbox.Controls.Add(this.firetime);
             this.ratesbox.Controls.Add(this.label5);
             this.ratesbox.Controls.Add(this.label6);
+            this.ratesbox.Enabled = false;
             this.ratesbox.Location = new System.Drawing.Point(6, 63);
             this.ratesbox.Name = "ratesbox";
-            this.ratesbox.Size = new System.Drawing.Size(243, 68);
+            this.ratesbox.Size = new System.Drawing.Size(243, 100);
             this.ratesbox.TabIndex = 0;
             this.ratesbox.TabStop = false;
             this.ratesbox.Text = "Rates:";
             // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBox4.Location = new System.Drawing.Point(6, 45);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(84, 17);
+            this.checkBox4.TabIndex = 21;
+            this.checkBox4.Text = "Use Recoil?";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
+            // Firetime
+            // 
+            this.Firetime.DecimalPlaces = 1;
+            this.Firetime.Location = new System.Drawing.Point(78, 19);
+            this.Firetime.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.Firetime.Name = "Firetime";
+            this.Firetime.Size = new System.Drawing.Size(159, 20);
+            this.Firetime.TabIndex = 17;
+            this.Firetime.ValueChanged += new System.EventHandler(this.Firetime_ValueChanged);
+            // 
             // recoiltime
             // 
-            this.recoiltime.Location = new System.Drawing.Point(81, 13);
+            this.recoiltime.DecimalPlaces = 1;
+            this.recoiltime.Enabled = false;
+            this.recoiltime.Location = new System.Drawing.Point(78, 68);
+            this.recoiltime.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
             this.recoiltime.Name = "recoiltime";
-            this.recoiltime.Size = new System.Drawing.Size(121, 20);
-            this.recoiltime.TabIndex = 18;
-            this.recoiltime.TextChanged += new System.EventHandler(this.recoiltime_TextChanged);
-            // 
-            // firetime
-            // 
-            this.firetime.Location = new System.Drawing.Point(81, 39);
-            this.firetime.Name = "firetime";
-            this.firetime.Size = new System.Drawing.Size(121, 20);
-            this.firetime.TabIndex = 17;
-            this.firetime.TextChanged += new System.EventHandler(this.firetime_TextChanged);
+            this.recoiltime.Size = new System.Drawing.Size(159, 20);
+            this.recoiltime.TabIndex = 4;
+            this.recoiltime.ValueChanged += new System.EventHandler(this.recoiltime_ValueChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 20);
+            this.label5.Location = new System.Drawing.Point(6, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 13);
             this.label5.TabIndex = 15;
@@ -1175,7 +909,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 42);
+            this.label6.Location = new System.Drawing.Point(6, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 16;
@@ -1194,8 +928,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkBox3);
             this.groupBox1.Controls.Add(this.levelnum);
-            this.groupBox1.Controls.Add(this.label23);
+            this.groupBox1.Controls.Add(this.label34);
             this.groupBox1.Controls.Add(this.maxstack);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.raritybox);
@@ -1204,15 +939,27 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(3, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(335, 134);
+            this.groupBox1.Size = new System.Drawing.Size(335, 153);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Main";
             // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBox3.Location = new System.Drawing.Point(5, 99);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(80, 17);
+            this.checkBox3.TabIndex = 20;
+            this.checkBox3.Text = "Use Level?";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
             // levelnum
             // 
             this.levelnum.Enabled = false;
-            this.levelnum.Location = new System.Drawing.Point(68, 99);
+            this.levelnum.Location = new System.Drawing.Point(68, 122);
             this.levelnum.Maximum = new decimal(new int[] {
             40,
             0,
@@ -1233,14 +980,14 @@
             0});
             this.levelnum.ValueChanged += new System.EventHandler(this.levelnum_ValueChanged);
             // 
-            // label23
+            // label34
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 101);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(36, 13);
-            this.label23.TabIndex = 17;
-            this.label23.Text = "Level:";
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(6, 124);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(36, 13);
+            this.label34.TabIndex = 19;
+            this.label34.Text = "Level:";
             // 
             // maxstack
             // 
@@ -1836,10 +1583,17 @@
             // 
             // speednum
             // 
+            this.speednum.DecimalPlaces = 1;
             this.speednum.Location = new System.Drawing.Point(53, 17);
+            this.speednum.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
             this.speednum.Name = "speednum";
             this.speednum.Size = new System.Drawing.Size(207, 20);
             this.speednum.TabIndex = 1;
+            this.speednum.ValueChanged += new System.EventHandler(this.speednum_ValueChanged);
             // 
             // label2
             // 
@@ -2032,6 +1786,8 @@
             // 
             // Rawcodetab
             // 
+            this.Rawcodetab.Controls.Add(this.label8);
+            this.Rawcodetab.Controls.Add(this.rawrecipe);
             this.Rawcodetab.Controls.Add(this.rawclear);
             this.Rawcodetab.Controls.Add(this.rawcode);
             this.Rawcodetab.Controls.Add(this.updatecode);
@@ -2042,6 +1798,15 @@
             this.Rawcodetab.TabIndex = 8;
             this.Rawcodetab.Text = "Raw Code";
             this.Rawcodetab.UseVisualStyleBackColor = true;
+            // 
+            // rawrecipe
+            // 
+            this.rawrecipe.Location = new System.Drawing.Point(3, 273);
+            this.rawrecipe.Name = "rawrecipe";
+            this.rawrecipe.ReadOnly = true;
+            this.rawrecipe.Size = new System.Drawing.Size(414, 203);
+            this.rawrecipe.TabIndex = 4;
+            this.rawrecipe.Text = "";
             // 
             // rawclear
             // 
@@ -2058,7 +1823,7 @@
             this.rawcode.Location = new System.Drawing.Point(3, 6);
             this.rawcode.Name = "rawcode";
             this.rawcode.ReadOnly = true;
-            this.rawcode.Size = new System.Drawing.Size(411, 470);
+            this.rawcode.Size = new System.Drawing.Size(414, 248);
             this.rawcode.TabIndex = 2;
             this.rawcode.Text = "";
             // 
@@ -2120,15 +1885,46 @@
             this.Bullets.Images.SetKeyName(37, "pulse.png");
             this.Bullets.Images.SetKeyName(38, "purpleplasma.png");
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(56, 564);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(36, 13);
+            this.label23.TabIndex = 21;
+            this.label23.Text = "Level:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(56, 585);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(36, 13);
+            this.label35.TabIndex = 22;
+            this.label35.Text = "Level:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(188, 257);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Recipe:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 607);
+            this.Controls.Add(this.label35);
+            this.Controls.Add(this.label23);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Starbound: Item Creator";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -2137,12 +1933,8 @@
             this.Recipetab.ResumeLayout(false);
             this.recipebox.ResumeLayout(false);
             this.recipebox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item6amount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item5amount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item4amount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item3amount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item2amount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item1amount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemnum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.amountmade)).EndInit();
             this.Buildingblocktab.ResumeLayout(false);
             this.Buildingblocktab.PerformLayout();
             this.Shieldtab.ResumeLayout(false);
@@ -2163,6 +1955,8 @@
             this.twohandbox.PerformLayout();
             this.ratesbox.ResumeLayout(false);
             this.ratesbox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Firetime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recoiltime)).EndInit();
             this.Maintab.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -2189,6 +1983,7 @@
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.Rawcodetab.ResumeLayout(false);
+            this.Rawcodetab.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2196,7 +1991,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
@@ -2219,36 +2013,9 @@
         private System.Windows.Forms.GroupBox recipebox;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.NumericUpDown item6amount;
-        private System.Windows.Forms.NumericUpDown item5amount;
-        private System.Windows.Forms.NumericUpDown item4amount;
-        private System.Windows.Forms.NumericUpDown item3amount;
-        private System.Windows.Forms.NumericUpDown item2amount;
-        private System.Windows.Forms.NumericUpDown item1amount;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox craftingstation;
-        private System.Windows.Forms.ComboBox CB6;
-        private System.Windows.Forms.ComboBox CB5;
-        private System.Windows.Forms.ComboBox CB4;
-        private System.Windows.Forms.ComboBox CB3;
-        private System.Windows.Forms.ComboBox CB2;
-        private System.Windows.Forms.ComboBox CB1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox ratesbox;
-        private System.Windows.Forms.TextBox recoiltime;
-        private System.Windows.Forms.TextBox firetime;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TabPage Descriptiontab;
@@ -2258,7 +2025,6 @@
         private System.Windows.Forms.GroupBox twohandbox;
         private System.Windows.Forms.CheckBox guntwohanded;
         private System.Windows.Forms.NumericUpDown levelnum;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TabPage Projectiletab;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
@@ -2317,6 +2083,26 @@
         private System.Windows.Forms.PictureBox projpicture;
         private System.Windows.Forms.ImageList Bullets;
         private System.Windows.Forms.ToolStripMenuItem diToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown Firetime;
+        private System.Windows.Forms.NumericUpDown recoiltime;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox othername;
+        private System.Windows.Forms.RichTextBox rawrecipe;
+        private System.Windows.Forms.NumericUpDown amountmade;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Button removeitem;
+        private System.Windows.Forms.Button additem;
+        private System.Windows.Forms.NumericUpDown itemnum;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ListBox itemlist;
+        private System.Windows.Forms.Label label8;
     }
 }
 

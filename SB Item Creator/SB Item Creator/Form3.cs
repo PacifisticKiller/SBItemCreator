@@ -33,14 +33,23 @@ namespace SB_Item_Creator
             }
             else
             {
-                Value.directory = folderBrowserDialog1.SelectedPath;
-                if (Value.direcselected == true)
+                if (textBox1.Text.Contains("Starbound"))
                 {
-                    Form2 form2 = new Form2();
-                    form2.Show();
-                    Value.direcselected = false;
+                    Value.directory = textBox1.Text;
+                    if (Value.direcselected == true)
+                    {
+                        Form2 form2 = new Form2();
+                        form2.Show();
+                        Value.direcselected = false;
+                    }
+                    this.Close();
+                    System.IO.File.WriteAllText(Value.pathsave+"\\CurrentDirectory.TXT", Value.directory);
                 }
-                this.Close();
+                else
+                {
+                    MessageBox.Show("Please select your Starbound directory");
+                }
+                
             }
         }
     }

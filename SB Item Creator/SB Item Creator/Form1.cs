@@ -17,32 +17,20 @@ namespace SB_Item_Creator
         public Form1()
         {
             InitializeComponent();
-            Form3 form3 = new Form3();
-            form3.Show();
-            colorname.Text = "R = 255" + Environment.NewLine + "G = 0" + Environment.NewLine + "B = 0";
+            recipe.creation();
         }
 
         public static string colorr="255",colorg="255",colorb="255",item;
         SolidBrush stringbrush = new SolidBrush(Color.Red);
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Value.itemname = weaponname.Text;
-            string itemlevel = "\"tier1\" : [";
-            string path = @"C:\Program Files (x86)\Steam\SteamApps\common\Starbound\mods\assets\player.config";
-            string newitemlist = @"      { ""item"" : """ + Value.itemname + "\" },";
-            string[] lines = File.ReadAllLines(path);
-            for (int i = 0; i < lines.Length; i++)
-            {
-                lines[i] = lines[i].Replace(itemlevel, itemlevel+Environment.NewLine+newitemlist);
-            }
-
-            File.WriteAllLines(path, lines);
-        }
-
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Value.directory == @"C:\Program Files (x86)\Steam\SteamApps\common\Starbound")
+            if (System.IO.File.Exists(Value.pathsave + "\\CurrentDirectory.TXT") == true)
+            {
+                Value.dirready = true;
+                Value.directory = File.ReadAllText(Value.pathsave + "\\CurrentDirectory.TXT");
+            }
+            if (Value.dirready == false)
             {
                 Value.direcselected = true;
                 Form3 form3 = new Form3();
@@ -79,13 +67,11 @@ namespace SB_Item_Creator
             ratesbox.Enabled = false;
             projbox.Enabled = false;
             colorbox.Enabled = false;
-            levelnum.Enabled = false;
 
             checkedListBox1.Enabled = false;
             if (item == "Gun")
             {
                 raritybox.Enabled = true;
-                levelnum.Enabled = true;
                 gunnamebox.Enabled = true;
                 twohandbox.Enabled = true;
                 ratesbox.Enabled = true;
@@ -130,22 +116,28 @@ namespace SB_Item_Creator
             Value.maxstack = maxstack.Text; 
         }
 
-        private void recoiltime_TextChanged(object sender, EventArgs e)
-        {
-            Value.recoiltime = recoiltime.Text;     
-        }
-
-        private void firetime_TextChanged(object sender, EventArgs e)
-        {
-            Value.firetime = firetime.Text;
-        }
-
         private void updatecode_Click(object sender, EventArgs e)
         {
             Value.itemfilename = Value.itemname.ToLower();
             Value.itemfilename = Value.itemfilename.Replace(" ", string.Empty);
             gun.updatestrings();
-            rawcode.Text = gun.@base;
+            gun.creation(Value.recoil, Value.level);
+            rawcode.Text = gun.@base+gun.sl24;
+            recipe.updatevalus();
+            recipe.creation();
+            for (int x = 0; x < itemlist.Items.Count; x++)
+            {
+                if (itemlist.Items.Count - 1 < x)
+                {
+                    recipe.create3 += itemlist.Items[x].ToString() + "," + Environment.NewLine;
+                }
+                else if (itemlist.Items.Count - 1 == x)
+                {
+                    recipe.create3 += itemlist.Items[x].ToString() + Environment.NewLine;
+                    x = itemlist.Items.Count;
+                }
+            }
+            rawrecipe.Text = recipe.create + recipe.create3 + recipe.create2;
         }
 
         private void guntwohanded_CheckedChanged(object sender, EventArgs e)
@@ -254,5 +246,163 @@ namespace SB_Item_Creator
                 
             }
         }
+
+        private void speednum_ValueChanged(object sender, EventArgs e)
+        {
+            Value.speed = Convert.ToString(speednum.Value);
+        }
+
+        private void Firetime_ValueChanged(object sender, EventArgs e)
+        {
+            Value.firetime = Convert.ToString(Firetime.Value);
+        }
+
+        private void recoiltime_ValueChanged(object sender, EventArgs e)
+        {
+            Value.recoiltime = Convert.ToString(recoiltime.Value);  
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Value.level == false)
+            {
+                levelnum.Enabled = true;
+                Value.level = true;
+            }
+            else if (Value.level == true)
+            {
+                levelnum.Enabled = false;
+                Value.level = false;
+                if (checkBox3.Checked == true)
+                {
+                    checkBox3.Checked = false;
+                }
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (Value.recoil == false)
+            {
+                recoiltime.Enabled = true;
+                Value.recoil = true;
+            }
+            else if (Value.recoil == true)
+            {
+                recoiltime.Enabled = false;
+                Value.recoil = false;
+                if (checkBox4.Checked == true)
+                {
+                    checkBox4.Checked = false;
+                }
+            }
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Value.blueprinttier = comboBox3.Text.ToLower();
+            Value.blueprinttier = Value.blueprinttier.Replace(" ", String.Empty);
+
+        }
+
+        private void diToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.Show();
+        }
+
+        private void craftingstation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (craftingstation.Text.ToString() == "Other (Custom)")
+            {
+                othername.Enabled = true;
+            }
+            else if (craftingstation.Text.ToString() != "Other (Custom)")
+            {
+                othername.Enabled = false;
+                Value.craftingstation = craftingstation.Text.ToString();
+                Value.craftingstation = Value.craftingstation.ToLower();
+                Value.craftingstation = Value.craftingstation.Replace(" ", String.Empty);
+            }
+
+        }
+
+        private void othername_TextChanged(object sender, EventArgs e)
+        {
+            Value.craftingstation = othername.Text;
+        }
+
+        private void amountmade_ValueChanged(object sender, EventArgs e)
+        {
+            Value.im = amountmade.Value.ToString();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Value.item1 = comboBox2.Text.ToString();
+        }
+
+        private void itemnum_ValueChanged(object sender, EventArgs e)
+        {
+            Value.ita1 = Convert.ToString(itemnum.Value.ToString());
+        }
+
+        private void additem_Click(object sender, EventArgs e)
+        {
+            if (itemlist.Items.Count <= 5)
+            {
+                if (comboBox2.Text.ToString() != string.Empty)
+                {
+                    recipe.updateitem();
+                    itemlist.BeginUpdate();
+                    itemlist.Items.Add(recipe.rp3);
+                    itemlist.EndUpdate();
+                }
+                else
+                {
+                    MessageBox.Show("Please select an item from the list" + Environment.NewLine + "before trying to add it.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("You have reached the max amount of items." + Environment.NewLine + "Remove some if you want to add more.");
+            }
+        }
+
+        private void removeitem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (itemlist.Items.Count > 0)
+                {
+                    if (itemlist.SelectedIndex != -1)
+                    {
+                        itemlist.BeginUpdate();
+                        itemlist.Items.RemoveAt(itemlist.SelectedIndex);
+                        itemlist.EndUpdate();
+                    }
+                    else
+                    {
+                        MessageBox.Show("You need to select an item to remove first.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please add an item first before" + Environment.NewLine + "trying to remove an item.");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("There has been an error with trying to remove an item." + Environment.NewLine + "Please try again.");
+            }
+        }
+
     }
 }
