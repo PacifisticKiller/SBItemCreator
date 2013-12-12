@@ -8,7 +8,7 @@ namespace SB_Item_Creator
     class recipe
     {
         public static string rp1, rp2, rp3, rp9, rp10, rp11, rp12;
-        public static string create,create2,create3;
+        public static string create,create2,create3,completerecipe;
 
         public static void updatevalus()
         {
@@ -27,6 +27,13 @@ namespace SB_Item_Creator
         {
             create = rp1 + rp2;
             create2 = rp9 + rp10 + rp11 + rp12;
+        }
+        public static void stringrecipe()
+        {
+            Form1 form1 = new Form1();
+            updatevalus();
+            creation();
+            completerecipe = create + create3 + create2;
         }
     }
 }

@@ -125,9 +125,10 @@ namespace SB_Item_Creator
             rawcode.Text = gun.@base+gun.sl24;
             recipe.updatevalus();
             recipe.creation();
+            recipe.create3 = "";
             for (int x = 0; x < itemlist.Items.Count; x++)
             {
-                if (itemlist.Items.Count - 1 < x)
+                if (itemlist.Items.Count - 1 > x)
                 {
                     recipe.create3 += itemlist.Items[x].ToString() + "," + Environment.NewLine;
                 }

@@ -133,6 +133,7 @@
             this.apexdesc = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.Rawcodetab = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
             this.rawrecipe = new System.Windows.Forms.RichTextBox();
             this.rawclear = new System.Windows.Forms.Button();
             this.rawcode = new System.Windows.Forms.RichTextBox();
@@ -141,7 +142,6 @@
             this.Bullets = new System.Windows.Forms.ImageList(this.components);
             this.label23 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.Recipetab.SuspendLayout();
             this.recipebox.SuspendLayout();
@@ -1799,6 +1799,15 @@
             this.Rawcodetab.Text = "Raw Code";
             this.Rawcodetab.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(188, 257);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Recipe:";
+            // 
             // rawrecipe
             // 
             this.rawrecipe.Location = new System.Drawing.Point(3, 273);
@@ -1902,15 +1911,6 @@
             this.label35.Size = new System.Drawing.Size(36, 13);
             this.label35.TabIndex = 22;
             this.label35.Text = "Level:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(188, 257);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 13);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Recipe:";
             // 
             // Form1
             // 
@@ -2101,8 +2101,8 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.ListBox itemlist;
         private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.ListBox itemlist;
     }
 }
 
